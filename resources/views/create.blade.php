@@ -7,10 +7,10 @@
         <div class="col-md-8 offset-md-2">
             <form action="#" method="POST">
                 <div class="mb-2">
-                    <input type="text" class="form-control" name="firstname" placeholder="Firstname">
+                    <input type="text" class="form-control" name="first_name" placeholder="First name">
                 </div>
                 <div class="mb-2">
-                    <input type="text" class="form-control" name="lastname" placeholder="Lastname">
+                    <input type="text" class="form-control" name="last_name" placeholder="Last name">
                 </div>
                 <div class="mb-2">
                     <input type="text" class="form-control" name="profession" placeholder="Profession">

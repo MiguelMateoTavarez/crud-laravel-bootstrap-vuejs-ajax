@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
 use App\Models\User;
+use Illuminate\Database\Seeder;
 
 class UserSeeder extends Seeder
 {
@@ -17,19 +17,25 @@ class UserSeeder extends Seeder
         User::create([
             'first_name' => 'Miguel',
             'last_name' => 'Mateo',
-            'profession' => 'programmer',
+            'profession' => 'Programmer',
+            'created_at' => now(),
+            'updated_at' => now()
         ]);
 
         User::create([
-            'first_name' => 'George',
-            'last_name' => 'Clooney',
-            'profession' => 'actor',
+            'first_name' => 'Harry',
+            'last_name' => 'Potter',
+            'profession' => 'Magician',
+            'created_at' => now(),
+            'updated_at' => now()
         ]);
 
         User::create([
-            'first_name' => 'Nelson',
-            'last_name' => 'Batista',
-            'profession' => 'teacher',
+            'first_name' => 'Alex',
+            'last_name' => 'Rodríguez',
+            'profession' => 'Baseball player',
+            'created_at' => now(),
+            'updated_at' => now()
         ]);
     }
 }

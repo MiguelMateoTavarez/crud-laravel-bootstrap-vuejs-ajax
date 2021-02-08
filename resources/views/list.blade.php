@@ -14,13 +14,15 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+        @foreach($users as $user)
+            <tr class="text-center">
+                <td>{{ $user->first_name }}</td>
+                <td>{{ $user->last_name }}</td>
+                <td>{{ $user->profession }}</td>
+                <td><a href="{{ route('edit', $user->id) }}" class="btn btn-primary">Edit</a></td>
+                <td><a href="{{ route('delete', $user->id) }}" class="btn btn-danger">Delete</a></td>
             </tr>
+        @endforeach
         </tbody>
     </table>
 </div>

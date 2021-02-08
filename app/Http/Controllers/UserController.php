@@ -13,6 +13,12 @@ class UserController extends Controller
         return view('create');
     }
 
+    public function edit($id)
+    {
+        $user = User::find($id);
+        return view('edit', ['user' => $user]);
+    }
+
     public function save(Request $request)
     {
         $request->validate([
@@ -32,6 +38,7 @@ class UserController extends Controller
 
     public function update(User $user, Request $request)
     {
+
         $request->validate([
             'first_name' => 'required',
             'last_name' => 'required',
@@ -42,9 +49,10 @@ class UserController extends Controller
             'first_name' => $request->input('first_name'),
             'last_name' => $request->input('last_name'),
             'profession' => $request->input('profession'),
+            'update_at' =>now()
         ]);
 
-        return redirect('/');
+        return redirect("/");
     }
 
     public function destroy($id)

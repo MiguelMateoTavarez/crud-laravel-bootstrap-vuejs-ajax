@@ -5,19 +5,21 @@
 <div class="container mt-4">
     <div class="row">
         <div class="col-md-8 offset-md-2">
-            <form action="{{ route('save') }}" method="POST">
-            @csrf
+            <form action="{{ route('update', $user->id) }}" method="POST">
+                @csrf
+                @method('PUT')
+
                 <div class="mb-2">
-                    <input type="text" class="form-control" name="first_name" value="{{ old('first_name') }}" placeholder="First name">
+                    <input type="text" class="form-control" name="first_name" value="{{ old('first_name', $user->first_name) }}" placeholder="First name">
                 </div>
                 <div class="mb-2">
-                    <input type="text" class="form-control" name="last_name" value="{{ old('last_name') }}" placeholder="Last name">
+                    <input type="text" class="form-control" name="last_name" value="{{ old('last_name', $user->last_name) }}" placeholder="Last name">
                 </div>
                 <div class="mb-2">
-                    <input type="text" class="form-control" name="profession" value="{{ old('profession') }}" placeholder="Profession">
+                    <input type="text" class="form-control" name="profession" value="{{ old('profession', $user->profession) }}" placeholder="Profession">
                 </div>
                 <div class="mb-2">
-                    <button type="submit" class="btn btn-primary mb-3">Create user</button>
+                    <button type="submit" class="btn btn-primary mb-3">Update user</button>
                 </div>
             </form>
             <br />

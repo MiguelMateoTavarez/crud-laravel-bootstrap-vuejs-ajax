@@ -13,5 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', 'App\Http\Controllers\HomeController@index')->name('list');
 Route::get('/create', 'App\Http\Controllers\UserController@index')->name('create');
+Route::get('/edit/{id}', 'App\Http\Controllers\UserController@edit')->name('edit');
+
+Route::post('/create/save', 'App\Http\Controllers\UserController@save')->name('save');
+Route::put('/update/{user}', 'App\Http\Controllers\UserController@update')->name('update');
+Route::get('/delete/{id}', 'App\Http\Controllers\UserController@destroy')->name('delete');
